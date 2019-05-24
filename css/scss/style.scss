@@ -1,0 +1,88 @@
+@import "reset";
+@import "variables";
+
+@import "grid";
+@import "mixins";
+@import "layout";
+
+@import "helpers"; 
+@import "colors";
+@import "typography"; 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+	background-color: $white;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	min-height: 100vh;
+}
+
+input, 
+textarea {
+	padding: $padding;
+	border: 1px solid $light-gray; 
+	width: 100%; 
+	margin-bottom: 1rem;
+}
+input::placeholder, 
+textarea::placeholder {
+	color: $light-gray;
+}
+
+button, 
+.button {
+	padding: 1rem 2rem;
+	color: #FFF;
+	border-radius: $radius; 
+	background-color: $primary-color; 
+	text-transform: uppercase;
+	border: none;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	outline: none;
+	box-shadow: 0 0 16px 0 lighten($gray, 35%); 
+	cursor: pointer;
+	transition: $transition;
+}
+button:hover, 
+.button:hover {
+	background-color: $darker-primary-color; 
+}
+button:active, 
+.button:active {
+	box-shadow: 0 0 2px 0 lighten($gray, 35%);
+
+}
+button:disabled,
+button[disabled], 
+.button:disabled,
+.button[disabled] {
+	opacity: 0.75;
+	box-shadow: 0 0 0 0 lighten($gray, 35%);
+	 cursor: default;
+}
+
+button.is-secondary, 
+.button.is-secondary {
+	color: $black;
+	background-color: $secondary-color; 
+}
+button.is-secondary:hover, 
+.button.is-secondary:hover {
+	background-color: $darker-secondary-color; 
+}
+
+button.is-tertiary, 
+.button.is-tertiary {
+	color: $black;
+	background-color: white;
+}
+button.is-tertiary:hover, 
+.button.is-tertiary:hover {
+	background-color: $darker-white; 
+}

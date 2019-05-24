@@ -1,0 +1,149 @@
+// Flex
+// -------------------------
+.flex-h {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-v {
+	display: flex;
+	flex-direction: column;
+}
+.flex-h-even {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.flex-v-even {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.flex-left-top {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.flex-center-top {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.flex-right-top {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+.flex-left-center {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.flex-center-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flex-right-center {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.flex-left-bottom {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+.flex-center-bottom {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.flex-right-bottom {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.flex-even-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.flex-even-center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex-even-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.flex-left-even {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.flex-center-even {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex-right-even {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+
+// CSS Grid 
+// -------------------------
+
+$grid-gap: 20px;
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	grid-gap: 0 $grid-gap;
+}
+
+.grid-gapless { grid-gap: 0 !important; }
+
+
+
+// Grid 8 columns
+
+.grid-8 {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-gap: $grid-gap $grid-gap;
+}
+
+.grid-8-8 {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, auto);
+	grid-gap: $grid-gap $grid-gap;
+}
+
+// No matter the resolution
+.g { @include grid-8-x-definitions; }
+.g-x {	@include grid-8-x-definitions; }
+.g-y {	@include grid-8-y-definitions; }
+
+// Mobile resolution
+@media (max-width: 767px) {
+	.gs { @include grid-8-x-definitions; }
+	.gs-x {	@include grid-8-x-definitions; }
+	.gs-y {	@include grid-8-y-definitions; }
+}
+
+// Tablet + desktop resolution
+@media (min-width: 768px) {
+	.gm { @include grid-8-x-definitions; }
+	.gm-x {	@include grid-8-x-definitions; }
+	.gm-y {	@include grid-8-y-definitions; }
+}
