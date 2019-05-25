@@ -46,11 +46,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.grid-page {
-  display: grid;
-  grid-gap: 0;
-  grid-template-columns: 1fr 2fr 3fr 8fr 1fr; }
-
 .container {
   width: 100%;
   padding-right: 15px;
@@ -893,11 +888,8 @@ table {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  grid-gap: 0 20px; }
-
-.grid-gapless {
-  grid-gap: 0 !important; }
+  grid-template-columns: 1fr 2fr 3fr 8fr 1fr;
+  grid-gap: 0; }
 
 .grid-8 {
   display: grid;
@@ -1306,7 +1298,7 @@ table {
 .g-y-8-8 {
   grid-row: 8/9; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .gs-1-1 {
     grid-column: 1/2; }
   .gs-1 {
