@@ -1,0 +1,22 @@
+// Primary colors 
+// -------------------------
+$primary-color:  	#FF3644; 
+$secondary-color:  	#FAD150; 
+$tertiary-color:  	#D72229; 
+
+$white:          	#EBECE6; 
+$gray:           	#7F7F7F;
+$black:          	#000000;
+
+
+// Color variations
+// -------------------------
+$darker-primary-color:    	darken($primary-color, 6.6667%); 
+$darker-secondary-color:    darken($secondary-color, 6.6667%); 
+$darker-tertiary-color:    	darken($tertiary-color, 6.6667%); 
+$darker-white:    	darken($white, 6.6667%); 
+
+$dark-gray:      darken($gray, 23.14%); 
+$darker-gray:    darken($gray, 6.6667%); 
+$light-gray:     lighten($gray, 23.14%); 
+$lighter-gray:   lighten($gray, 86.6667%); 
